@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="GPA.css">
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+
+
+
+
+<body>
+    <ul>
+        <li><img class="logo" src="images/logo.jpg"></li>
+        <li><a class="active" href="Index.html">Home</a></li>
+        <li><a href="Cases.html">Covid Cases ?</a></li>
+        <li><a href="GPA.html">Percentage ?</a></li>
+        <li><a href="Weather.html">Weather ?</a></li>
+        <li class="SignoutLi" onclick="exitFunction()"><a href="Login.html">SignOut ?</a>
+        </li>
+        <li><a href="#about">About ?</a></li>
+    </ul>
+
+    <br>
+    <center>
+
+        <br>
+        <form>
+            <div class="container">
+                <label for="ass1"><b>Assignment 1 Marks  : </b></label>
+                <input type="text" placeholder="Enter Marks" id="a1" required>
+
+                <label for="ass2"><b>Assignment 2 Marks : </b></label>
+                <input type="text" placeholder="Enter Marks" id="a2" required>
+                <label for="test1"><b>Test 1 Marks : </b></label>
+                <input type="text" placeholder="Enter Marks" id="t1" required>
+
+                <label for="test2"><b>Test 2 Marks : </b></label>
+                <input type="text" placeholder="Enter Marks" id="t2" required>
+
+                <label for="project"><b>Project Marks </b></label>
+                <input type="text" placeholder="Enter Marks" id="p" required>
+
+
+                <input class="buttonL" value="Calculate" type="button" onClick="calc()" />
+                <button type="button" class="buttonL" onclick="cancelFunction()">Cancel</button>
+                <div class="show">
+                    <div id="result"><label><b>RESULT</b></label></div>
+                </div>
+
+            </div>
+        </form>
+
+
+
+        <script>
+            function calc() {
+                var a1 = document.getElementById('a1').value;
+                var a2 = document.getElementById('a2').value;
+                var t1 = document.getElementById('t1').value;
+                var t2 = document.getElementById('t2').value;
+                var p = document.getElementById('p').value;
+
+                if (a1 != "" || a2 != "" || t1 != "" || t2 != "" || p != "") {
+
+                    var res = a1 * .10 + a2 * .10 + .25 * t1 + .25 * t2 + .30 * p;
+                    document.getElementById('result').innerHTML = res;
+                    return false
+                } else {
+                    swal({
+                        icon: "info",
+                        text: "PLease enter the values!",
+                    });
+                }
+
+
+
+
+            }
+
+        </script>
+        <script>
+            function cancelFunction() {
+                location.replace("GPA.html")
+            }
+
+        </script>
+
+    </center>
+    <br>
+    <section class="black">
+        <br>
+
+        <p id="about" align="center">ABOUT </p>
+        <p align="center">Guided by Internet, followed by me.</p>
+        <center>
+            <table>
+                <tr align="centre">
+                    <td><a class="social" href="https://www.instagram.com/dilrajsdhoot/"><img class="social" src="images/insta.png"></a></td>
+                    <td><a class="social" href="https://kirdaari.blogspot.com/"><img class="social" src="images/bloger.jpg"></a></td>
+                    <td><a class="social" href="https://www.youtube.com/channel/UCbZfKXKzpwhVyew4MbX7oEw?view_as=subscriber"><img class="social" src="images/youtube.png"></a>
+
+                    <td><a class="social" href="https://www.facebook.com/dilrajsingh.dhoot/"><img class="social" src="images/facebook.png"></a></td>
+
+
+                </tr>
+            </table>
+        </center>
+    </section>
+</body>
+
+</html>

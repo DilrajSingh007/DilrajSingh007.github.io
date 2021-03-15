@@ -1,0 +1,120 @@
+<html>
+<!--Dilraj Singh | C0772372 | Assignment 1-->
+
+<head>
+    <title> weather</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="Weather.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    
+
+    <script>
+        $(function() {
+
+            //This is dor providing a list of cities for selection
+
+            $("#city").selectmenu({
+                change: function(event, data) {
+                    var selectedVal = $("#city").val();
+
+                    //This will work if the city id selected
+
+                    if (selectedVal != "SELECT A CITY") {
+
+                        //This means if the selectd city is not "SELECT A CITY".... then do the following
+
+                        $("#selected_city").html("<h2>" + selectedVal + "</h2>")
+                        //Here ajax id callijng an API 
+                        $.ajax({
+                            url: "http://api.weatherstack.com/current?access_key=9d0eeaf40283ff192bfb6266af0c21eb&query=" + selectedVal,
+                            success: function(result) {
+                                var obj = JSON.parse(JSON.stringify(result));
+                                //Here conversion is taking place from JSON to Javascript object
+
+                                $("#temp").text("Temperature (℃) " + obj.current.temperature); //This will get temperature 
+                                $("#cond").text("Condition: " + obj.current.weather_descriptions[0]); //This will get condition 
+                                $("#icon").attr("src", obj.current.weather_icons[0]); //This will get weather image 
+                            }
+                        });
+                    }
+                    return false;
+                }
+
+            });
+        });
+
+    </script>
+
+</head>
+
+<body>
+   <ul>
+        <li  class="op"><img class="logo" src="images/logo.jpg"></li>
+        <li class="op"><a class="active" href="Index.html">Home</a></li>
+        <li class="op"><a href="Cases.html">Covid Cases ?</a></li>
+        <li class="op"><a href="GPA.html">Percentage ?</a></li>
+        <li class="op"><a href="Weather.html">Weather ?</a></li>
+        <li class="op" id="SignoutLi" onclick="exitFunction()"><a href="Login.html">SignOut ?</a>
+        </li>
+        <li class="op"><a href="#about">About ?</a></li>
+    </ul>
+
+    <br>
+    <div id="main">
+        <center>
+<br>
+            <h2>Let's learn about your city's weather</h2>
+
+
+            <div id="selection">
+                <fieldset>
+                    <select name="city" id="city">
+                        <!--This is the list of cities-->
+                        <option>SELECT A CITY</option>
+                        <option >Toronto</option>
+                        <option>Vancouver</option>
+                        <option>Montreal</option>
+                        <option>Calgary</option>
+                        <option>Edmonton</option>
+                        <option>Winnipeg</option>
+                        <option>Surrey</option>
+                    </select>
+                </fieldset>
+            </div>
+            <div id="city_info">
+                <p id="selected_city"></p>
+                <p id="temp"></p>
+                <p id="cond"></p>
+                <img id="icon">
+            </div>
+        </center>
+    </div>
+     <br>
+    <section class="black">
+        <br>
+
+
+      <p id="about"align="center">ABOUT </p>
+        <p align="center">Guided by Internet, followed by me.</p>
+        <center>
+            <table>
+                <tr align="centre">
+                    <td><a class="social" href="https://www.instagram.com/dilrajsdhoot/"><img class="social" src="images/insta.png"></a></td>
+                    <td><a class="social" href="https://kirdaari.blogspot.com/"><img class="social" src="images/bloger.jpg"></a></td>
+                    <td><a class="social" href="https://www.youtube.com/channel/UCbZfKXKzpwhVyew4MbX7oEw?view_as=subscriber"><img class="social" src="images/youtube.png"></a>
+
+                    <td><a class="social" href="https://www.facebook.com/dilrajsingh.dhoot/"><img class="social" src="images/facebook.png"></a></td>
+
+
+                </tr>
+            </table>
+        </center>
+    </section>
+    
+</body>
+
+</html>

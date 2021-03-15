@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Cases.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {
+            'packages': ['geochart'],
+            // Note: you will need to get a mapsApiKey for your project.
+            // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+            'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+        });
+        google.charts.setOnLoadCallback(drawRegionsMap);
+
+        function drawRegionsMap() {
+            var data = google.visualization.arrayToDataTable([
+                ['Country', 'Total covid cases in million'],
+                ['Germany', 2.51],
+                ['United States', 28.89],
+                ['India', 11.23],
+                ['Canada', 0.89],
+                ['France', 3.96],
+                ['Australia', 0.029],
+                ['RU', 4.27],
+                ['United Kingdom', 4.23],
+                ['Argentina', 2.15],
+                ['Iran', 1.69],
+                ['Bangladesh', 0.54],
+                ['Denmark', 0.21],
+                ['Nigeria', 0.16],
+                ['China', 0.10],
+                ['Bhutan', 0.000869],
+            ]);
+
+            var options = {
+                colorAxis: {
+                    colors: ['#324F17', '#FFA07A', '#FA8072', '#D00000', '#8B0000']
+                },
+
+                datalessRegionColor: '#E6E6FA',
+                defaultColor: '#f5f5f5',
+            };
+
+            var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+            chart.draw(data, options);
+        }
+
+    </script>
+
+ <script type="text/javascript">
+      google.charts.load('current', {'packages':['line']});
+      google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'Month');
+      data.addColumn('number', 'Mask Usage(%)');
+      data.addColumn('number', 'Death Count(K)');
+      data.addColumn('number', 'Social Distancing(%)');
+
+      data.addRows([
+       [1,  62, 15, 41.8],
+        [2,  64, 69.5, 32.4],
+        [3,  63,   57, 25.7],
+        [4,  63, 18.8, 10.5],
+        [5,  62, 17.6, 10.4],
+        [6,   61, 13.6,  7.7],
+       
+      ]);
+
+      var options = {
+        chart: {
+          title: '2021 Projections',
+         
+        },
+        width: 800,
+        height: 400,
+        axes: {
+          x: {
+            0: {side: 'top'}
+          }
+        }
+      };
+
+      var chart = new google.charts.Line(document.getElementById('line_top_x'));
+
+      chart.draw(data, google.charts.Line.convertOptions(options));
+    }
+  </script>
+    </head>
+
+<body>
+
+    <ul>
+        <li><img class="logo" src="images/logo.jpg"></li>
+        <li><a class="active" href="Index.html">Home</a></li>
+        <li><a href="Cases.html">Covid Cases ?</a></li>
+        <li><a href="GPA.html">Percentage ?</a></li>
+        <li><a href="Weather.html">Weather ?</a></li>
+        <li class="SignoutLi" onclick="exitFunction()"><a href="Login.html">SignOut ?</a>
+        </li>
+        <li><a href="#about">About ?</a></li>
+    </ul>
+
+    <br>
+    <center>
+        <h1>
+            COVID NUMBER IN THE WORLD
+        </h1>
+    </center>
+
+    <center>
+        <div class="map" id="regions_div" style="width: 600px; height: ;"></div>
+    </center>
+    <center>
+        <blockquote>
+            The graph shows the number of corona cases in the world at present.
+            <br>Move cursor to know the approx. figures.
+        </blockquote>
+    </center>
+    <center>
+        <h1>
+            UPCOMING
+        </h1>
+    </center>
+    <center>
+        <div class="map"  style="width: 810px; height: 410px ;" id="line_top_x"></div>
+    </center>
+     <center>
+        <blockquote>
+            The above graph shows the covid related projections for the year 2021.
+            <br>Move cursor to know the approx. figures.
+        </blockquote>
+    </center>
+    <br>
+    <section class="black">
+        <br>
+
+      <p id="about"align="center">ABOUT </p>
+        <p align="center">Guided by Internet, followed by me.</p>
+        <center>
+            <table>
+                <tr align="centre">
+                    <td><a class="social" href="https://www.instagram.com/dilrajsdhoot/"><img class="social" src="images/insta.png"></a></td>
+                    <td><a class="social" href="https://kirdaari.blogspot.com/"><img class="social" src="images/bloger.jpg"></a></td>
+                    <td><a class="social" href="https://www.youtube.com/channel/UCbZfKXKzpwhVyew4MbX7oEw?view_as=subscriber"><img class="social" src="images/youtube.png"></a>
+
+                    <td><a class="social" href="https://www.facebook.com/dilrajsingh.dhoot/"><img class="social" src="images/facebook.png"></a></td>
+
+
+                </tr>
+            </table>
+        </center>
+    </section>
+</body>
+
+</html>

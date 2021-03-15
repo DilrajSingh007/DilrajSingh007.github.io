@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: 	#F8F8F8;
+}
+
+.map{
+    border: 1px solid purple;
+    max-height: inherit;
+    min-height: inherit;
+    max-width: inherit;
+    min-width: inherit;
+}
+/*Navigation bar*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+    box-shadow:2px 2px purple;
+    font-size: 15px;
+    background-color: white;
+    
+    
+}
+.logo{
+    height: 9vh;
+    width: 23vh;
+}
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  color: white;
+   background: linear-gradient(to top right, #c48ae2 8%, black 90%)
+}
+.SignoutLi{
+    float: right;
+}
+/*This is the quote section*/
+
+blockquote {color: black;
+    border-left: 10px;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D";
+     background-color: 	gainsboro;
+       transition: 0.5s;
+    width: 50%;
+    /*for shape of commas */ 
+    
+}
+blockquote p {
+  display: inline;
+   
+}
+
+ /*This is the cards section*/   
+/* Float four columns side by side */
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {
+    margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+    .column, {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+/*Bottom*/
+
+     .black {
+            height: 25Vh;
+            background-color: black;
+            margin: auto;
+            color: gainsboro;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    .social {
+            height: 30px;
+            width: 30px;
+            border-radius: 100%;
+
+        }
+
+        .social:hover {
+            border-radius: 100%;
+            transition: 1s;
+            box-shadow: 1px 1px;
+        }

@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form {
+    border: 3px solid gainsboro;
+    width: 60vh;
+}
+
+.container {
+    padding: 16px;
+    height: auto;
+    width: auto;
+
+}
+
+.container2 {
+    
+    height: auto;
+    width: auto;
+    padding: 10px 18px;
+  
+
+}
+
+.logo {
+    width: 39vh;
+}
+
+/*Navigation bar*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+    box-shadow:2px 2px purple;
+    font-size: 15px;
+    background-color: white;
+    
+    
+}
+.logo{
+    height: 9vh;
+    width: 23vh;
+}
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  color: white;
+   background: linear-gradient(to top right, #c48ae2 8%, black 90%)
+}
+.SignoutLi{
+    float: right;
+}
+input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.buttonL {
+    background-color: maroon;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    background: linear-gradient(to top right, #c48ae2 8%, black 90%)
+}
+
+.buttonL:hover {
+    opacity: 0.8;
+
+}
+
+button {
+    background-color: maroon;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+
+}
+
+button:hover {
+    opacity: 0.8;
+
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: gray;
+}
+.show{
+    border: 1px solid grey;
+    margin: auto;
+
+    color: gray;
+    padding: 16px;
+
+}
+/*Bottom*/
+
+     .black {
+            height: 25Vh;
+            background-color: black;
+            margin: auto;
+            color: gainsboro;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    .social {
+            height: 30px;
+            width: 30px;
+            border-radius: 100%;
+
+        }
+
+        .social:hover {
+            border-radius: 100%;
+            transition: 1s;
+            box-shadow: 1px 1px;
+        }

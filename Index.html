@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Index.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {
+            'packages': ['corechart']
+        });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            var data = google.visualization.arrayToDataTable([
+                ['Lang', 'Percentage'],
+                ['HTML', 30],
+                ['CSS', 30],
+                ['JAVASCRIPT', 40],
+
+            ]);
+
+            var options = {
+                title: 'Languages',
+                is3D: true,
+                colors: ['#DA70D6', '#D8BFD8', '#DDA0DD'],
+
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+            chart.draw(data, options);
+        }
+
+    </script>
+ </head>
+<body>
+
+    <ul>
+        <li><img class="logo" src="images/logo.jpg"></li>
+        <li><a class="active" href="Index.html">Home</a></li>
+        <li><a href="Cases.html">Covid Cases ?</a></li>
+        <li><a href="GPA.html">Percentage ?</a></li>
+        <li><a href="Weather.html">Weather ?</a></li>
+        <li class="SignoutLi" onclick="exitFunction()"><a href="Login.html">SignOut ?</a>
+        </li>
+        <li><a href="#about">About ?</a></li>
+    </ul>
+
+    <br>
+
+
+    <blockquote>
+        <style>
+            .head {
+                font-size: 20px
+            }
+
+        </style><b class="head">Fullstop?</b>
+        <br><i> It is a website created for the website competition. This is a multipage website. This website includes mapa, charts, form and calcultions. It has been created using mainly CSS, HTML and JAVASCRIPT. This website has a Login form and sign out button. Bottom of the web page has the about section. Using GPA form of the GPA webpage user can calculate his GPA. One can know about weather conditions of his city by using Weather web page. Covid is the major concern these days, so the a page has been created for providing information about covid cases around the worls.</i>
+
+
+
+        <br>
+    </blockquote>
+    <center>
+        <div class="map" id="piechart" style="width: 700px; height: 200px;"></div>
+    </center>
+
+    <br>
+
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <center><br><br><br><br><h1>Covid Cases?</h1></center>
+
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Your Country?</h1>
+                            <p>To learn more</p>
+                            <p><a href="Cases.html">Click Here</a></p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+
+
+                            <center><br><br><br><br><h1>GPA?</h1></center>
+
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Your GPA?</h1>
+                            <p>To learn more</p>
+                            <p><a href="GPA.html">Click Here</a></p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+
+
+                            <center><br><br><br><br><h1>Weather?</h1></center>
+
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Your city?</h1>
+                            <p>To learn more</p>
+                            <p><a href="Weather.html">Click Here</a></p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+
+                            <center><br><br><br><br><h1>About?</h1></center>
+
+
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Creator?</h1>
+                            <p>To learn more</p>
+                            <p><a href="#about">Click Here</a></p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <section class="black">
+        <br>
+
+        <p id="about"align="center">ABOUT </p>
+        <p align="center">Guided by Internet, followed by me.</p>
+        <center>
+            <table>
+                <tr align="centre">
+                    <td><a class="social" href="https://www.instagram.com/dilrajsdhoot/"><img class="social" src="images/insta.png"></a></td>
+                    <td><a class="social" href="https://kirdaari.blogspot.com/"><img class="social" src="images/bloger.jpg"></a></td>
+                    <td><a class="social" href="https://www.youtube.com/channel/UCbZfKXKzpwhVyew4MbX7oEw?view_as=subscriber"><img class="social" src="images/youtube.png"></a>
+
+                    <td><a class="social" href="https://www.facebook.com/dilrajsingh.dhoot/"><img class="social" src="images/facebook.png"></a></td>
+
+
+                </tr>
+            </table>
+        </center>
+    </section>
+</body>
+</html>
+   

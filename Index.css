@@ -1,0 +1,196 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: 	#F8F8F8;
+}
+
+.map{
+    border: 1px solid purple;
+    max-height: inherit;
+    min-height: inherit;
+    max-width: inherit;
+    min-width: inherit;
+}
+/*Navigation bar*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+    box-shadow:2px 2px purple;
+    font-size: 15px;
+    background-color: white;
+    
+    
+}
+.logo{
+    height: 9vh;
+    width: 23vh;
+}
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  color: white;
+   background: linear-gradient(to top right, #c48ae2 8%, black 90%)
+}
+.SignoutLi{
+    float: right;
+}
+/*This is the quote section*/
+.question{
+      height: 9vh;
+    width: 23vh;
+}
+blockquote {color: black;
+    border-left: 10px solid 	gainsboro;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D";
+     background-color: 	gainsboro;
+       transition: 0.5s;/*for shape of commas */ 
+    
+}
+blockquote:before {
+  color: #A9A9A9;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote p {
+  display: inline;
+   
+}
+
+ /*This is the cards section*/   
+/* Float four columns side by side */
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {
+    margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+    .column, {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+/* Style the counter cards */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: gainsboro;
+}
+
+
+
+.flip-card {
+    top: 1500px;
+    background-color: transparent;
+    width: inherit;
+    height: 250px;
+
+    perspective: 1000px;
+    border: 2px solid grey;
+    /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    height: inherit;
+    width: inherit;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+
+}
+
+/* Style the back side */
+.flip-card-back {
+    background-color: 		#D8BFD8;
+    color: black;
+    transform: rotateY(180deg);
+}
+.flip-card-back p a{
+    text-decoration: none;
+    border: 1px solid gray;
+    color: black
+}
+
+/*Bottom*/
+
+     .black {
+            height: 25Vh;
+            background-color: black;
+            margin: auto;
+            color: gainsboro;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    .social {
+            height: 30px;
+            width: 30px;
+            border-radius: 100%;
+
+        }
+
+        .social:hover {
+            border-radius: 100%;
+            transition: 1s;
+            box-shadow: 1px 1px;
+        }

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <link rel="stylesheet" href="Login.css">
+    <title>Login</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</head>
+
+<body>
+    <center>
+        <br><br>
+
+        <form oncontextmenu="return false" name="loginform" action="Index.html" method="post">
+            <div class="imgcontainer">
+                <center> <img src="images/logo.jpg" alt="logo" class="logo"></center>
+            </div>
+            <div class="container">
+                <label for="uid"><b>Your ID</b></label>
+                <input type="text" placeholder="Enter your id" name="uid" required>
+                <label for="pwd"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="pwd" required>
+
+                <input class="buttonL" type="button" value="Login" onclick="login()" />
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" class="cancelbtn" onclick="cancelFunction()">Cancel</button>
+
+                <button class="cancelbtn" type="button" onclick="forgotFunction()">Forgot Password?</button>
+                <script>
+                    function cancelFunction() {
+                        location.replace("Login.html")
+                    }
+
+
+                    function forgotFunction() {
+                        swal({
+                            
+                            text: "Username : Kirdaar  |   Password : Kirdaari",
+                            icon: "info",
+                            buttons: true,
+                            dangerMode: true,
+                        })
+                    }
+
+
+                    function login() {
+                        var user = document.loginform.uid.value;
+                        var pass = document.loginform.pwd.value;
+                        if (user == "" || pass == "") {
+                            swal({icon: "info",
+                                 text: "PLease enter the credentials!",});
+
+                        } else {
+                            if ((user == "ustut" || user == "kirdaar") && pass == "kirdaari") {
+                                window.location = "Index.html";
+                            } else {
+                                swal({icon: "error",text:"Wrong password or username!"});
+                            }
+                        }
+                    }
+
+                </script>
+
+
+            </div>
+        </form>
+    </center>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+body {
+    background-color: 
+}
+
+#main {
+    border: 1px solid grey;
+    margin: auto;
+    width: 40%;
+    height: 70%;
+
+    color: gray;
+    padding: 16px;
+
+
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray
+}
+
+.container {
+    padding: 16px;
+    height: auto;
+    width: auto;
+
+
+}
+/*Navigation bar*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+    box-shadow:2px 2px purple;
+    font-size: 15px;
+    background-color: white;
+    
+    
+}
+.logo{
+    height: 9vh;
+    width: 23vh;
+}
+.op {
+  float: left;
+}
+
+.op a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+}
+
+.op a:hover {
+  color: white;
+   background: linear-gradient(to top right, #c48ae2 8%, black 90%)
+}
+#SignoutLi{
+    float: right;
+}
+
+
+/*Bottom*/
+
+     .black {
+            height: 25Vh;
+            background-color: black;
+            margin: auto;
+            color: gainsboro;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    .social {
+            height: 30px;
+            width: 30px;
+            border-radius: 100%;
+
+        }
+
+        .social:hover {
+            border-radius: 100%;
+            transition: 1s;
+            box-shadow: 1px 1px;
+        }
